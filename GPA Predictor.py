@@ -134,7 +134,7 @@ st.markdown("""
 
 col1, col2, col3 = st.columns([1,1,1])
 with col2:
-    if st.button("Predict Your GPA Right Now!!"):
+    if st.button("✅Predict Your GPA Right Now!!"):
         st.success(pred)
 
 col1, col2, col3 = st.columns([1, 1, 1])
