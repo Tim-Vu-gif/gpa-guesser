@@ -58,7 +58,6 @@ if st.session_state.show_bar:
 
 # --- Pie Chart ---
 if st.session_state.show_pie:
-    st.subheader('Students with GPA > 3.5: Weekly Study Time')
     df_high = df[df['GPA'] > 3.5]
     bins = [0, 5, 10, 15, 20, 25]
     labels = ['0-5', '6-10', '11-15', '16-20', '21-25']
