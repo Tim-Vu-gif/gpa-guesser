@@ -132,10 +132,15 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-if st.button("Predict"):
-    st.subheader(pred)
-    st.balloons()
+col1, col2, col3 = st.columns([1,1,1])
+with col2:
+    if st.button("Predict Your GPA Right Now!!"):
+        st.success(pred)
 
-if st.button("🔄 Convert GPA to 10-point system"):
-    gpa_10 = pred * 10 / 4
-    st.success(f"Converted GPA: {gpa_10:.2f} / 10")
+col1, col2, col3 = st.columns([1, 1, 1])
+with col2:
+    if st.button("🔄 Convert GPA to 10 point system"):
+        gpa_10 = pred * 10 / 4
+        st.success(f"Converted GPA: {gpa_10:.2f} / 10")
+
+st.caption("This model tries to predict GPA based on students perfomance data,It can not be 100% accurate but it really shows how it can be influenced by different backgrounds.")
